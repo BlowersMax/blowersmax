@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 import About from '../../components/about/about';
 import Hero from '../../components/hero/hero';
+import FeaturedProjects from '../../components/projects/projects';
 
 function Home() {
   return (
@@ -21,6 +22,7 @@ function Home() {
       </Alert>
       <Hero />
       <About />
+      <FeaturedProjects />
     </Box>
   );
 }
