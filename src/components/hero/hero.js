@@ -9,11 +9,13 @@ function Hero() {
       bg="brand.100"
       borderRadius={15}
       color="white"
-      h='md'
+      h="md"
       my={3}
     >
-      <Heading as='h1'>Max Blowers</Heading>
-      <Code px={5} py={2} borderRadius={10}>Building a Better Web</Code>
+      <Heading as="h1">Max Blowers</Heading>
+      <Code px={5} py={2} my={3} borderRadius={10}>
+        Building a Better Web
+      </Code>
     </Flex>
   );
 }

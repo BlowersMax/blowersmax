@@ -4,7 +4,7 @@ function About() {
   return (
     <Flex direction="column" align="center" justify="center">
       <Heading as="h2">About Me</Heading>
-      <Text fontSize='xl'>
+      <Text fontSize="xl" mx={7} my={3}>
         I am a developer based out of Tucson Arizona. I specialize in creating
         websites for small businesses. I use a variety of technologies to create
         a seamless user experience for all.
