@@ -4,9 +4,9 @@ import {
   Center,
   Flex,
   Heading,
-  Spacer,
   Text,
 } from '@chakra-ui/react';
+import { FaGithub } from 'react-icons/fa';
 
 function FeaturedProjects() {
   return (
@@ -32,7 +32,28 @@ function FeaturedProjects() {
           </Center>
           <Text></Text>
           <Flex justify="space-around" my={3}>
-            <Button>GH</Button>
+            <Button colorScheme='teal' leftIcon={<FaGithub />}>
+              GitHub
+            </Button>
+            <Button>Link</Button>
+          </Flex>
+        </Box>
+        <Box
+          bg="brand.100"
+          minW="sm"
+          color="white"
+          px={10}
+          py={5}
+          borderRadius={15}
+        >
+          <Center>
+            <Text fontSize="xl">BikePilgrim</Text>
+          </Center>
+          <Text></Text>
+          <Flex justify="space-around" my={3}>
+            <Button colorScheme='teal' leftIcon={<FaGithub />}>
+              GitHub
+            </Button>
             <Button>Link</Button>
           </Flex>
         </Box>
@@ -49,24 +70,9 @@ function FeaturedProjects() {
           </Center>
           <Text></Text>
           <Flex justify="space-around" my={3}>
-            <Button>GH</Button>
-            <Button>Link</Button>
-          </Flex>
-        </Box>
-        <Box
-          bg="brand.100"
-          minW="sm"
-          color="white"
-          px={10}
-          py={5}
-          borderRadius={15}
-        >
-          <Center>
-            <Text fontSize="xl">My Portfolio</Text>
-          </Center>
-          <Text></Text>
-          <Flex justify="space-around" my={3}>
-            <Button>GH</Button>
+            <Button colorScheme='teal' leftIcon={<FaGithub />}>
+              GitHub
+            </Button>
             <Button>Link</Button>
           </Flex>
         </Box>
