@@ -10,6 +10,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/navigation/footer';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import Projects from './pages/projects/projects';
 
 const theme = extendTheme({
   colors: {
@@ -46,6 +47,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/projects' element={<Projects />} />
         </Routes>
       </BrowserRouter>
       <Footer />

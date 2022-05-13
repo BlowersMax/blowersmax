@@ -24,12 +24,12 @@ function About() {
       <Text fontSize="xl" mx={7} my={3}>
         Some Q's and A's
       </Text>
-      <Accordion allowToggle width={{md: '75%'}} mx={5}>
+      <Accordion allowToggle width={{ md: '75%' }} mx={5}>
         <AccordionItem my={1}>
           <h2>
             <AccordionButton>
               <Box flex="1" textAlign="left">
-                What Technologies Do I Use?
+                What technologies do I use?
               </Box>
               <AccordionIcon />
             </AccordionButton>
@@ -43,7 +43,7 @@ function About() {
           <h2>
             <AccordionButton>
               <Box flex="1" textAlign="left">
-                Am I Currently Availible to make a site?
+                Am I currently taking new clients?
               </Box>
               <AccordionIcon />
             </AccordionButton>
@@ -51,7 +51,7 @@ function About() {
           <AccordionPanel>
             Yes! Shoot me a message at my{' '}
             <Link href="#contact" color="teal">
-              contact page
+              contact form
             </Link>
           </AccordionPanel>
         </AccordionItem>
@@ -59,16 +59,16 @@ function About() {
           <h2>
             <AccordionButton>
               <Box flex="1" textAlign="left">
-                What Are My Prices?
+                Pricing?
               </Box>
               <AccordionIcon />
             </AccordionButton>
           </h2>
           <AccordionPanel>
-            There is no straight forward answer to that question, it's different
-            for every site. To get a quote head to my{' '}
+            There is no easy answer to that question, it's different for every
+            site. To get a quote head to my{' '}
             <Link href="#contact" color="teal">
-              contact page
+              contact form
             </Link>
           </AccordionPanel>
         </AccordionItem>
@@ -76,7 +76,7 @@ function About() {
           <h2>
             <AccordionButton>
               <Box flex="1" textAlign="left">
-                How Long Does it Take to Get a Site?
+                How long does it take to make a site?
               </Box>
               <AccordionIcon />
             </AccordionButton>

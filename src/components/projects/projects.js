@@ -1,6 +1,7 @@
-import { LinkIcon } from '@chakra-ui/icons';
+import { ArrowForwardIcon, LinkIcon } from '@chakra-ui/icons';
 import { Box, Button, Center, Flex, Heading, Text } from '@chakra-ui/react';
 import { FaGithub } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 function FeaturedProjects() {
   function handleurl(url) {
@@ -9,6 +10,8 @@ function FeaturedProjects() {
       win.focus();
     }
   }
+
+  let navi = useNavigate()
 
   return (
     <Flex
@@ -33,11 +36,25 @@ function FeaturedProjects() {
           </Center>
           <Text></Text>
           <Flex justify="space-around" my={3}>
-            <Button colorScheme="teal" leftIcon={<FaGithub />}>
+            <Button
+              colorScheme="teal"
+              borderRadius={15}
+              leftIcon={<FaGithub />}
+              onClick={() => {
+                handleurl('https://github.com/blowersmax');
+              }}
+            >
               GitHub
             </Button>
-            <Button colorScheme="teal" leftIcon={<LinkIcon />}>
-              Link
+            <Button
+              colorScheme="teal"
+              leftIcon={<LinkIcon />}
+              borderRadius={15}
+              onClick={() => {
+                handleurl('/');
+              }}
+            >
+              Website
             </Button>
           </Flex>
         </Box>
@@ -54,8 +71,15 @@ function FeaturedProjects() {
           </Center>
           <Text></Text>
           <Flex justify="space-around" my={3}>
-            <Button onClick={() => {handleurl('https://bikepilgrim.webflow.io')}} colorScheme="teal" leftIcon={<LinkIcon />}>
-              Link
+            <Button
+              onClick={() => {
+                handleurl('https://bikepilgrim.webflow.io');
+              }}
+              colorScheme="teal"
+              leftIcon={<LinkIcon />}
+              borderRadius={15}
+            >
+              Website
             </Button>
           </Flex>
         </Box>
@@ -68,18 +92,34 @@ function FeaturedProjects() {
           borderRadius={15}
         >
           <Center>
-            <Text fontSize="xl">My Portfolio</Text>
+            <Text fontSize="xl">Coming Soon</Text>
           </Center>
           <Flex justify="space-around" my={3}>
-            <Button colorScheme="teal" leftIcon={<FaGithub />}>
-              GitHub
+            <Button
+              colorScheme="teal"
+              borderRadius={15}
+              leftIcon={<FaGithub />}
+            >
+              Soon!
             </Button>
-            <Button colorScheme="teal" leftIcon={<LinkIcon />}>
-              Link
+            <Button
+              colorScheme="teal"
+              borderRadius={15}
+              leftIcon={<LinkIcon />}
+            >
+              Soon!
             </Button>
           </Flex>
         </Box>
       </Flex>
+      <Button
+        rightIcon={<ArrowForwardIcon />}
+        borderRadius={15}
+        colorScheme={'teal'}
+        onClick={() => {navi('/projects')}}
+      >
+        See More
+      </Button>
     </Flex>
   );
 }

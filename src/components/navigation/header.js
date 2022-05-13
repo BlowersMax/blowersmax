@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { ColorModeSwitcher } from '../../ColorModeSwitcher';
 
 const {
@@ -21,9 +22,17 @@ function Header() {
       my="10"
     >
       <Box>
-        <Heading size="md">Max Blowers</Heading>
+        <Heading
+          onClick={() => {
+            window.location = '/';
+          }}
+          _hover={{ color: 'teal', cursor: 'pointer' }}
+          size="md"
+        >
+          Max Blowers
+        </Heading>
       </Box>
-      <ButtonGroup gap="2">
+      <ButtonGroup gap="1">
         <Button
           colorScheme="teal"
           variant="ghost"
@@ -47,12 +56,13 @@ function Header() {
           variant="ghost"
           onClick={() => {
             toast({
-              title: 'Oh Dear...',
+              title: 'Oh No...',
               description:
                 "It appears this page isn't ready yet! Check back soon.",
               status: 'warning',
               duration: '3000',
               isCloseable: 'true',
+              position: 'top',
             });
           }}
         >

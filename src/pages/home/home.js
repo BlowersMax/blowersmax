@@ -17,7 +17,7 @@ function Home() {
       <Alert status="info" borderRadius={15}>
         <AlertIcon />
         <AlertTitle>
-          This site is still under construction. Things may be move or be added.
+          This site is still under construction. Things may be moved or be added.
         </AlertTitle>
       </Alert>
       <Hero />
