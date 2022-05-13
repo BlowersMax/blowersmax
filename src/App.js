@@ -27,13 +27,13 @@ const theme = extendTheme({
 })
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCHZ5tRkUBW7Lb1-tXzy0JBLS-i31_5bNw",
-  authDomain: "maxblowers-5280b.firebaseapp.com",
-  projectId: "maxblowers-5280b",
-  storageBucket: "maxblowers-5280b.appspot.com",
-  messagingSenderId: "832724305117",
-  appId: "1:832724305117:web:68ecd5fc018e082d1d8734",
-  measurementId: "G-4CQQEFSP5Z"
+  apiKey: process.env.REACT_APP_API,
+  authDomain: process.env.REACT_APP_AUTH,
+  projectId: process.env.REACT_APP_PID,
+  storageBucket: process.env.REACT_APP_SB,
+  messagingSenderId: process.env.REACT_APP_MID,
+  appId: process.env.REACT_APP_AID,
+  measurementId: process.env.REACT_APP_MEID
 };
 
 // Initialize Firebase
