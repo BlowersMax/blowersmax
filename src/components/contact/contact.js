@@ -17,7 +17,7 @@ function Contact() {
                             pointerEvents='none'
                             children={<EmailIcon color='gray.300' />}
                         />
-                        <Input type='tel' placeholder='Email' />
+                        <Input type='email' placeholder='Email' />
                     </InputGroup>
 
                 </FormControl>

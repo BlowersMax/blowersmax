@@ -9,10 +9,11 @@ import About from '../../components/about/about';
 import Contact from '../../components/contact/contact';
 import Hero from '../../components/hero/hero';
 import FeaturedProjects from '../../components/projects/projects';
+import '../../fuck.css'
 
 function Home() {
   return (
-    <Box m={3}>
+    <Box m={5}>
       <Alert status="info" borderRadius={15}>
         <AlertIcon />
         <AlertTitle>
@@ -22,8 +23,10 @@ function Home() {
       <Hero />
       <About />
       <Divider my='10' />
+      <div id='projects' />
       <FeaturedProjects />
       <Divider my='10' />
+      <div id='contact' />
       <Contact />
     </Box>
   );

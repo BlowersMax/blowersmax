@@ -4,8 +4,6 @@ import {
   extendTheme,
 } from '@chakra-ui/react';
 import "@fontsource/quicksand"
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
 import Home from './pages/home/home';
 import Header from './components/navigation/header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -27,8 +25,6 @@ const theme = extendTheme({
   }
 })
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyCHZ5tRkUBW7Lb1-tXzy0JBLS-i31_5bNw",
   authDomain: "maxblowers-5280b.firebaseapp.com",
