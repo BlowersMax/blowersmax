@@ -9,6 +9,7 @@ import {
   AccordionIcon,
   AccordionPanel,
   Center,
+  Link,
 } from '@chakra-ui/react';
 
 function About() {
@@ -23,12 +24,12 @@ function About() {
       <Text fontSize="xl" mx={7} my={3}>
         Some Q's and A's
       </Text>
-      <Accordion allowToggle width="50%">
-        <AccordionItem>
+      <Accordion allowToggle width={{md: '75%'}} mx={5}>
+        <AccordionItem my={1}>
           <h2>
             <AccordionButton>
               <Box flex="1" textAlign="left">
-                What Technologies do I use?
+                What Technologies Do I Use?
               </Box>
               <AccordionIcon />
             </AccordionButton>
@@ -38,15 +39,53 @@ function About() {
             create websites!
           </AccordionPanel>
         </AccordionItem>
-        <AccordionItem>
+        <AccordionItem my={1}>
           <h2>
             <AccordionButton>
               <Box flex="1" textAlign="left">
-                What Technologies do I use?
+                Am I Currently Availible to make a site?
               </Box>
+              <AccordionIcon />
             </AccordionButton>
-            <AccordionIcon />
           </h2>
+          <AccordionPanel>
+            Yes! Shoot me a message at my{' '}
+            <Link href="#contact" color="teal">
+              contact page
+            </Link>
+          </AccordionPanel>
+        </AccordionItem>
+        <AccordionItem my={1}>
+          <h2>
+            <AccordionButton>
+              <Box flex="1" textAlign="left">
+                What Are My Prices?
+              </Box>
+              <AccordionIcon />
+            </AccordionButton>
+          </h2>
+          <AccordionPanel>
+            There is no straight forward answer to that question, it's different
+            for every site. To get a quote head to my{' '}
+            <Link href="#contact" color="teal">
+              contact page
+            </Link>
+          </AccordionPanel>
+        </AccordionItem>
+        <AccordionItem my={1}>
+          <h2>
+            <AccordionButton>
+              <Box flex="1" textAlign="left">
+                How Long Does it Take to Get a Site?
+              </Box>
+              <AccordionIcon />
+            </AccordionButton>
+          </h2>
+          <AccordionPanel>
+            Depending on the complexity of the site it can take anywhere between
+            3 days and 3 weeks. The time depends on the overall complexity of
+            the site.
+          </AccordionPanel>
         </AccordionItem>
       </Accordion>
     </Flex>

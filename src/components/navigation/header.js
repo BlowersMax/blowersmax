@@ -5,11 +5,12 @@ const {
   Heading,
   Button,
   ButtonGroup,
-  Spacer,
   Box,
+  useToast,
 } = require('@chakra-ui/react');
 
 function Header() {
+  const toast = useToast();
   return (
     <Flex
       minWidth="max-content"
@@ -41,7 +42,20 @@ function Header() {
         >
           Contact
         </Button>
-        <Button colorScheme="teal" variant="ghost">
+        <Button
+          colorScheme="teal"
+          variant="ghost"
+          onClick={() => {
+            toast({
+              title: 'Oh Dear...',
+              description:
+                "It appears this page isn't ready yet! Check back soon.",
+              status: 'warning',
+              duration: '3000',
+              isCloseable: 'true',
+            });
+          }}
+        >
           Blog
         </Button>
         <ColorModeSwitcher />

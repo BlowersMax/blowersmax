@@ -1,14 +1,15 @@
-import {
-  Box,
-  Button,
-  Center,
-  Flex,
-  Heading,
-  Text,
-} from '@chakra-ui/react';
+import { LinkIcon } from '@chakra-ui/icons';
+import { Box, Button, Center, Flex, Heading, Text } from '@chakra-ui/react';
 import { FaGithub } from 'react-icons/fa';
 
 function FeaturedProjects() {
+  function handleurl(url) {
+    const win = window.open(url, '_blank');
+    if (win != null) {
+      win.focus();
+    }
+  }
+
   return (
     <Flex
       direction="column"
@@ -18,7 +19,7 @@ function FeaturedProjects() {
       gap={2}
     >
       <Heading as="h2">Featured Projects</Heading>
-      <Flex direction="row" my={3} gap="3" wrap='wrap' mx={10}>
+      <Flex direction="row" my={3} gap="3" wrap="wrap" mx={10}>
         <Box
           bg="brand.100"
           minW="sm"
@@ -32,10 +33,12 @@ function FeaturedProjects() {
           </Center>
           <Text></Text>
           <Flex justify="space-around" my={3}>
-            <Button colorScheme='teal' leftIcon={<FaGithub />}>
+            <Button colorScheme="teal" leftIcon={<FaGithub />}>
               GitHub
             </Button>
-            <Button>Link</Button>
+            <Button colorScheme="teal" leftIcon={<LinkIcon />}>
+              Link
+            </Button>
           </Flex>
         </Box>
         <Box
@@ -51,10 +54,9 @@ function FeaturedProjects() {
           </Center>
           <Text></Text>
           <Flex justify="space-around" my={3}>
-            <Button colorScheme='teal' leftIcon={<FaGithub />}>
-              GitHub
+            <Button onClick={() => {handleurl('https://bikepilgrim.webflow.io')}} colorScheme="teal" leftIcon={<LinkIcon />}>
+              Link
             </Button>
-            <Button>Link</Button>
           </Flex>
         </Box>
         <Box
@@ -69,10 +71,12 @@ function FeaturedProjects() {
             <Text fontSize="xl">My Portfolio</Text>
           </Center>
           <Flex justify="space-around" my={3}>
-            <Button colorScheme='teal' leftIcon={<FaGithub />}>
+            <Button colorScheme="teal" leftIcon={<FaGithub />}>
               GitHub
             </Button>
-            <Button>Link</Button>
+            <Button colorScheme="teal" leftIcon={<LinkIcon />}>
+              Link
+            </Button>
           </Flex>
         </Box>
       </Flex>

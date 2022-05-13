@@ -1,12 +1,11 @@
 import {
-  Button,
   ButtonGroup,
   Flex,
   Heading,
-  Spacer,
+  IconButton,
   Text,
 } from '@chakra-ui/react';
-import { FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 function Footer() {
   function twtr() {
@@ -21,6 +20,12 @@ function Footer() {
       win.focus();
     }
   }
+  function linkd() {
+    const win = window.open('https://linkedin.com/in/blowersmax', '_blank');
+    if (win != null) {
+      win.focus();
+    }
+  }
   return (
     <Flex
       minWidth="max-content"
@@ -28,28 +33,34 @@ function Footer() {
       justify="center"
       alignItems="center"
       gap="2"
-      mx="3"
       p="10"
       bg="brand.100"
-      borderRadius={15}
+      color="white"
     >
       <Heading size="md">&copy; Max Blowers - 2022</Heading>
-      <Spacer />
+      <Text>My Socials</Text>
       <ButtonGroup>
-        <Button
+        <IconButton
+          icon={<FaTwitter />}
+          onClick={() => {
+            twtr();
+          }}
           colorScheme="twitter"
-          onClick={() => {twtr();}}
-          leftIcon={<FaTwitter />}
-        >
-          Twitter
-        </Button>
-        <Button
+        />
+        <IconButton
+          icon={<FaInstagram />}
+          onClick={() => {
+            insta();
+          }}
           colorScheme="teal"
-          onClick={() => insta()}
-          leftIcon={<FaInstagram />}
-        >
-          Instagram
-        </Button>
+        />
+        <IconButton
+          icon={<FaLinkedin />}
+          onClick={() => {
+            linkd();
+          }}
+          colorScheme="linkedin"
+        />
       </ButtonGroup>
     </Flex>
   );
