@@ -10,30 +10,45 @@ import {
   HStack,
   Spacer,
 } from '@chakra-ui/react';
+import { useEffect } from 'react';
 import { FaBackward, FaGithub } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function Projects() {
   const navi = useNavigate();
+  const location = useLocation()
   function handleurl(url) {
     const win = window.open(url, '_blank');
     if (win != null) {
       win.focus();
     }
   }
+
+  useEffect(() => {
+    window.scrollTo({
+      top: '#top',
+      behavior: 'smooth'
+    })
+  }, []);
+
   return (
-    <Flex direction="column" minH="100vh" align="center" mx={3}>
+    <Flex direction="column" align="center" mx={3}>
+      <Box h={1} id="#top" />
       <HStack>
-        <Heading>My Projects</Heading>
-        <Spacer />
         <Button
           leftIcon={<ArrowBackIcon />}
           colorScheme="teal"
           borderRadius={15}
-          onClick={() => {navi('/')}}
+          onClick={() => {
+            navi('/');
+          }}
+          size='lg'
+          variant="ghost"
         >
           Back
         </Button>
+        <Spacer />
+        <Heading size='lg'>My Projects</Heading>
       </HStack>
       <Flex direction="row" my={8} gap={2} wrap="wrap">
         <Box
