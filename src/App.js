@@ -8,6 +8,7 @@ import Footer from './components/navigation/footer';
 import { initializeApp } from 'firebase/app';
 import { getAnalytics } from 'firebase/analytics';
 import Projects from './pages/projects/projects';
+import { getFirestore } from 'firebase/firestore';
 
 const theme = extendTheme({
   colors: {
@@ -36,6 +37,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+export const fdb = getFirestore(app)
 
 function App() {
   return (
