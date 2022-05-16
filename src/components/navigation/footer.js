@@ -1,8 +1,10 @@
 import {
   ButtonGroup,
+  Code,
   Flex,
   Heading,
   IconButton,
+  Tag,
   Text,
 } from '@chakra-ui/react';
 import { FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
@@ -37,7 +39,6 @@ function Footer() {
       bg="brand.100"
       color="white"
     >
-      <Heading size="md">&copy; Max Blowers - 2022</Heading>
       <Text>My Socials</Text>
       <ButtonGroup>
         <IconButton
@@ -62,6 +63,10 @@ function Footer() {
           colorScheme="linkedin"
         />
       </ButtonGroup>
+      <Heading size="md">&copy; Max Blowers - 2022</Heading>
+      <Code px={5} py={2} my={3} borderRadius={15}>
+        Coded with {'<'}3 by Max Blowers
+      </Code>
     </Flex>
   );
 }
