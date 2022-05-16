@@ -37,7 +37,7 @@ function Header() {
           colorScheme="teal"
           variant="ghost"
           onClick={() => {
-            window.location = '#projects';
+            window.location = '/#projects';
           }}
         >
           Projects
@@ -46,7 +46,7 @@ function Header() {
           colorScheme="teal"
           variant="ghost"
           onClick={() => {
-            window.location = '#contact';
+            window.location = '/#contact';
           }}
         >
           Contact

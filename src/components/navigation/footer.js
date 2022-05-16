@@ -53,7 +53,7 @@ function Footer() {
           onClick={() => {
             insta();
           }}
-          colorScheme="teal"
+          colorScheme="blue"
         />
         <IconButton
           icon={<FaLinkedin />}
