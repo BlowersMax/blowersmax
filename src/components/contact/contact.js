@@ -15,6 +15,9 @@ import {
 
 function Contact() {
   const toast = useToast();
+  function contact(name, email, message) {
+    console.log('contact:' + name + email + message)
+  }
   return (
     <Flex align="center" justify="center" direction="column">
       <Heading>Let's Chat</Heading>
