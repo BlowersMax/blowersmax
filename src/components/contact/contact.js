@@ -26,18 +26,50 @@ function Contact() {
     },
     onSubmit:values => {
       const {name, email, message} = values
-      try {
-        setDoc(doc(fdb, 'messages'), name, email, message)
-      } catch(e) {
-        console.error("error " + e)
+      if (!name, !email, !message) {
+        toast({
+          title: 'Whoops...',
+          description: `Please make sure all fields are filled out!`,
+          status: 'warning',
+          duration: 5000,
+          isClosable: true,
+          position: 'top'
+        })
+      } else {
+        try {
+          const docRef = addDoc(collection(fdb, 'messages'), {
+            name: name,
+            email: email,
+            message: message
+          })
+          cformik.resetForm()
+          toast({
+            title: 'Sweet! Message Sent.',
+            description: `I have received your message & will email you at ${email} soon!`,
+            status: 'success',
+            duration: 5000,
+            isClosable: true,
+            position: 'top'
+          })
+          console.log("Sent Message: " + docRef.id)
+        } catch(e) {
+          console.error("error " + e)
+          toast({
+            title: 'Oh No!',
+            description: `An error has occurred.`,
+            status: 'error',
+            duration: 5000,
+            isClosable: true,
+            position: 'top'
+          })
+        }
       }
-    }
+      }
   });
   return (
     <Flex align="center" justify="center" direction="column">
       <Heading>Let's Chat</Heading>
         <Box w={[300, 400, 500]}>
-          <Form>
             <FormControl isRequired="true">
               <FormLabel htmlFor="name">Full Name</FormLabel>
               <Input
@@ -76,15 +108,14 @@ function Contact() {
               />
             </FormControl>
             <Button
-              type="submit"
               minW="100%"
               my="3"
               colorScheme="teal"
               borderRadius={15}
+              onClick={cformik.handleSubmit}
             >
               Submit
             </Button>
-          </Form>
         </Box>
     </Flex>
   );
